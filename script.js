@@ -62,7 +62,7 @@ body.addEventListener('click', (e) => {
 // Canvas pixels
 canvas.addEventListener('mousedown', (e) => {
   mouseDown = (mouseDown === true) ? false : true;
-  if (e.target.className === 'canvasPixel') {
+  if (e.target.className === 'canvasPixel' && mouseDown === true) {
     e.target.style.backgroundColor = colorChoice();
   }
 });
