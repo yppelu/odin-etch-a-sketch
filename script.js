@@ -17,6 +17,7 @@ else mainHeading.style.fontSize = '300%'
 // Operation blocks
 const defaultChoiceButton = document.querySelector('.default-color-btn');
 const randomChoiceButton = document.querySelector('.random-color-btn');
+const eraserButton = document.querySelector('.eraser-btn');
 const resetButton = document.querySelector('.reset-btn');
 const chooseSizeSlider = document.querySelector('.choose-size-slider');
 
@@ -40,6 +41,7 @@ createCanvasPixels();
 // Buttons
 defaultChoiceButton.addEventListener('click', () => colorChoice = makeColorDefault);
 randomChoiceButton.addEventListener('click', () => colorChoice = makeColorRandom);
+eraserButton.addEventListener('click', () => colorChoice = makeColorEraser);
 resetButton.addEventListener('click', resetCanvas);
 
 // Slider
@@ -74,7 +76,7 @@ canvas.addEventListener('mouseover', (e) => {
 
 /* Functions */
 
-// Return a color user chose: grey or random
+// Return a color user chose: grey, random or erase
 function makeColorDefault() {
   return 'gray';
 }
@@ -83,6 +85,9 @@ function makeColorRandom() {
   let green = Math.floor(Math.random() * 255);
   let blue = Math.floor(Math.random() * 255);
   return `rgb(${red}, ${green}, ${blue})`;
+}
+function makeColorEraser() {
+  return '#FFEFEB';
 }
 
 // Resets the canvas
