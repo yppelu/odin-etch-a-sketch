@@ -13,17 +13,6 @@ body {
   background-color: #E2C9C3;
   color: #7E3D4A;
   font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin: 20px;
-}
-
-h1 {
-  font-size: 300%;
-  font-weight: 700;
 }
 
 main {
@@ -36,7 +25,7 @@ main {
 
 /*************** Parameters block styles ***************/
 
-#parameters {
+.parameters {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -143,7 +132,20 @@ button:active {
   background-color: #7E3D4A;
 }
 
-/*************** Canvas block styles ***************/
+/*************** Main section block styles ***************/
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+h1 {
+  font-weight: 700;
+}
 
 .canvas {
   box-shadow: 0 0 10px gray;
