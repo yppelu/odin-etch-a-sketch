@@ -1,5 +1,7 @@
 /* Main variables */
 
+const PIXEL_DEFAULT_COLOR = '#FFEFEB';
+
 const body = document.querySelector('body');
 const mainHeading = document.querySelector('h1');
 const canvas = document.querySelector('.canvas');
@@ -87,13 +89,13 @@ function makeColorRandom() {
   return `rgb(${red}, ${green}, ${blue})`;
 }
 function makeColorEraser() {
-  return '#FFEFEB';
+  return PIXEL_DEFAULT_COLOR;
 }
 
 // Resets the canvas
 function resetCanvas() {
   const canvasPixels = document.querySelectorAll('.canvas>div');
-  canvasPixels.forEach((div) => div.style.backgroundColor = '#FFEFEB');
+  canvasPixels.forEach((div) => div.style.backgroundColor = PIXEL_DEFAULT_COLOR);
 }
 
 // Creates the grid inside of canvas
@@ -101,7 +103,7 @@ function createCanvasPixels() {
   for (let i = 0; i < canvasPixelsAmount * canvasPixelsAmount; i++) {
     let div = document.createElement('div');
     div.classList.add('canvasPixel');
-    div.style.cssText = `height: ${canvasPixelSize}px; width: ${canvasPixelSize}px; background-color: #FFEFEB;`;
+    div.style.cssText = `height: ${canvasPixelSize}px; width: ${canvasPixelSize}px; background-color: ${PIXEL_DEFAULT_COLOR};`;
     canvas.append(div);
   }
 }
